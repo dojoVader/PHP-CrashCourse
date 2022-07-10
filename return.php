@@ -1,22 +1,29 @@
 <?php
+
 // Func returns value
-function countChars($character){
+function countChars($character)
+{
     return strlen($character);
 }
 // Function is void
-function debug($character){
-    echo "<p>The character is ".$character."</p>";
+function debug($character)
+{
+    echo '<p>The character is '.$character.'</p>';
 }
 
 // Value contains the returned values
-$value = countChars("Hi my name is Okeowo Aderemi");
+$value = countChars('Hi my name is Okeowo Aderemi');
 
-$val = debug("I love George Micheal");
+$val = debug('I love George Micheal');
 
-print $value;
+echo $value;
 
-print $val;
+echo $val;
 
-// This is my file
-
-?>
+function sayName($input)
+{
+    return $input;
+}
+// Return statement returns the value in the function to be copied by a variable
+$d = sayName('Joke');
+var_dump($d);
