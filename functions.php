@@ -50,7 +50,7 @@ debug($sampleTextFit);
 
 // Default argument
 // This sets a default argument for the function if the argument is not passed to the function
-function country($where = 'Nigeria'){ 
+function country($where = 'United States of America'){ 
 	echo '<p>My country is '.$where.'</p>';
 }
 
