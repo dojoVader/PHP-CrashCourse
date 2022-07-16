@@ -27,3 +27,4 @@ function sayName($input)
 // Return statement returns the value in the function to be copied by a variable
 $d = sayName('Joke');
 var_dump($d);
+ as

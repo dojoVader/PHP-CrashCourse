@@ -42,7 +42,7 @@ $input = 'An example of a palindrome is ABBA';
      if (function_exists($func)) {
          // $input = call_user_func($func, $input); // uppercase(r) //flip(r)
 
-         $input = $func($func, $input);
+         $input = $func($input);
      }
  }
  var_dump($funcList);
