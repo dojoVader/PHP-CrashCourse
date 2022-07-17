@@ -78,6 +78,51 @@ echo $benz->getCarName();
 echo $lexus->getCarName();
 echo $porsche->getCarName();
 
+class Members {
+    public $name;
+    public $age;
+    public $gender;
+    public $role;
+    public Car $car;
+
+    public function __construct($name,$age,$gender,$role,Car $car){
+        $this->name = $name;
+        $this->age = $age;
+        $this->gender = $gender;
+        $this->role = $role;
+        $this->car = $car;
+    }
+
+    public function getVechicle(){
+        return $this->car->getCarName();
+    }
+
+    public function getInformation(){
+        return "<p>I am {$this->name}, I am {$this->age} years old and I am {$this->gender} by gender and also a/an {$this->role}</p>";
+    }
+    // When the page has finished running a __destruct is called
+    // When it is set to null or delete
+    public function __destruct()
+    {
+      var_dump("Page has been destroyed: {$this->name}");
+    }
+}
+
+// Constructors
+$Instructor = new Members("Okeowo Aderemi", 24, "Female","Instructor",$lexus);
+
+$Blessing = new Members("Goddess of Wealth", 20,  "Female","Student",$benz);
+ // $Instructor no longer points to Member Class
+// Garbage Collector = Checks for empty variables and frees the memory
+
+echo $Instructor->getInformation();
+echo $Blessing->getInformation();
+echo $Blessing->getVechicle();
+
+
+
+
+
 
 
 
